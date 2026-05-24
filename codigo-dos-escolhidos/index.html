@@ -1002,6 +1002,17 @@
   window.addEventListener('popstate', function () {
     fire();
   });
+
+  // Trigger 4: 20s sem interação (idle)
+  let idleTimer;
+  function resetIdleTimer() {
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(fire, 20000);
+  }
+  ['scroll', 'touchstart', 'touchmove', 'click', 'keydown', 'pointerdown'].forEach(function (evt) {
+    window.addEventListener(evt, resetIdleTimer, { passive: true });
+  });
+  resetIdleTimer();
 })();
 </script>
 </body>
