@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) — substituir G-XXXXXXXXXX pelo ID GA4 da Voz da Origem -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <title>O Código dos Escolhidos — As 12 marcas que você carrega sem saber</title>
+  <meta name="description" content="12 marcas foram colocadas em você antes de você nascer. Elas explicam as rejeições, o tempo que nunca encaixou, as madrugadas em que você acorda sem motivo, o TDAH, os padrões que continuam voltando. A leitura completa das 12, em uma biblioteca privada.">
+  <meta property="og:title" content="O Código dos Escolhidos — Antes de você nascer, você foi marcado">
+  <meta property="og:description" content="A leitura completa das 12 marcas colocadas em você antes de você nascer.">
+  <meta property="og:image" content="IMAGENS/00-codex-cover.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A24B;
+      --gold-soft: #E5CB8B;
+      --gold-deep: #8B6F2A;
+      --midnight: #0E1726;
+      --midnight-soft: #1B2538;
+      --midnight-deeper: #060B14;
+      --parchment: #F5EFE0;
+      --parchment-dark: #E8DFC9;
+      --text: #1A140C;
+      --text-muted: #5C5039;
+      --line: #C9BC9A;
+      --red-flame: #D14B3C;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 23px;
+      line-height: 1.75;
+      color: var(--midnight);
+      background: var(--parchment);
+      font-weight: 600;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(circle at 50% 40%, rgba(201, 162, 75, 0.15) 0%, transparent 60%),
+        linear-gradient(180deg, var(--midnight-deeper) 0%, var(--midnight) 100%);
+      color: var(--parchment); padding: 110px 24px 90px; text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: 0; left: 50%;
+      transform: translateX(-50%); width: 100px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .hero h1 {
+      font-family: 'Cinzel', serif; font-weight: 600;
+      font-size: clamp(22px, 3.2vw, 36px); line-height: 1.25;
+      letter-spacing: 0.5px; max-width: 920px; margin: 0 auto 18px;
+    }
+    .hero h1.accent {
+      color: var(--gold); margin-top: 0;
+      font-size: clamp(26px, 3.8vw, 42px); font-weight: 700;
+    }
+    .hero h1.accent .twelve {
+      font-size: 1.3em; letter-spacing: 4px;
+      text-shadow: 0 0 30px rgba(201, 162, 75, 0.4);
+    }
+    .hero .subhead {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: clamp(16px, 1.8vw, 21px); max-width: 780px;
+      margin: 44px auto 30px;
+      color: var(--parchment-dark); line-height: 1.55; font-weight: 500;
+    }
+    .hero .subhead strong {
+      color: var(--gold-soft); font-style: normal; font-weight: 600;
+    }
+    .hero .read-slow {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 20px; color: var(--gold-soft);
+      margin-top: 36px; letter-spacing: 0.3px; font-weight: 500;
+    }
+
+    /* BUTTONS */
+    .cta-btn {
+      display: inline-block; font-family: 'Cinzel', serif;
+      font-weight: 700; font-size: 17px; letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, var(--gold-soft) 0%, var(--gold) 60%, var(--gold-deep) 100%);
+      color: var(--midnight); padding: 24px 56px; border-radius: 6px;
+      text-decoration: none; transition: all 0.25s;
+      box-shadow: 0 5px 0 var(--gold-deep), 0 12px 32px rgba(201, 162, 75, 0.35);
+      cursor: pointer; border: none;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 0 var(--gold-deep), 0 16px 40px rgba(201, 162, 75, 0.45);
+    }
+    .cta-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 var(--gold-deep), 0 6px 16px rgba(201, 162, 75, 0.3);
+    }
+    .cta-btn-large { font-size: 19px; padding: 28px 64px; }
+
+    /* SECTIONS */
+    .section { max-width: 780px; margin: 0 auto; padding: 70px 24px; }
+    .section h2 {
+      font-family: 'Cinzel', serif; font-weight: 600;
+      font-size: clamp(26px, 3.4vw, 36px); line-height: 1.3;
+      color: var(--midnight); margin-bottom: 36px; letter-spacing: 0.5px;
+      text-align: center;
+    }
+    .section p { margin-bottom: 24px; font-size: 23px; color: var(--text); }
+    .section p strong { color: var(--midnight); font-weight: 700; }
+    .section p em { color: var(--text-muted); font-style: italic; }
+
+    /* IMPACT BOX */
+    .impact-box {
+      background: var(--midnight);
+      color: var(--gold);
+      padding: 36px 32px;
+      margin: 56px auto;
+      max-width: 620px;
+      border-radius: 6px;
+      border: 1px solid var(--gold);
+      box-shadow: 0 8px 30px rgba(14, 23, 38, 0.25);
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(22px, 2.6vw, 28px);
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: 0.5px;
+    }
+    .impact-box .small {
+      display: block; color: var(--parchment-dark); font-size: 0.7em;
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-weight: 500; margin-bottom: 8px; letter-spacing: 0.3px;
+    }
+    .impact-box strong { color: var(--gold); font-weight: 700; }
+
+    /* MARKS TEASER */
+    .marks-teaser { list-style: none; padding: 0; margin: 32px 0; }
+    .marks-teaser li {
+      padding: 18px 0 18px 38px; position: relative;
+      border-bottom: 1px solid var(--line);
+      font-size: 20px; line-height: 1.5;
+    }
+    .marks-teaser li:last-child { border-bottom: none; }
+    .marks-teaser li::before {
+      content: '✦'; position: absolute; left: 0; top: 18px;
+      color: var(--gold); font-size: 18px;
+    }
+    .marks-teaser li strong {
+      font-family: 'Cinzel', serif; color: var(--midnight);
+      display: block; margin-bottom: 4px; font-size: 19px; font-weight: 600;
+    }
+    .marks-teaser li span {
+      color: var(--midnight); font-style: italic; font-weight: 500;
+      font-size: 19px; opacity: 0.85;
+    }
+    .marks-teaser-more {
+      text-align: center; margin-top: 32px;
+      font-family: 'Cinzel', serif; font-style: italic;
+      color: var(--gold-deep); font-size: 19px; letter-spacing: 0.3px;
+    }
+
+    /* CODEX COVER TEASER */
+    .codex-cover-teaser {
+      background:
+        radial-gradient(circle at 50% 50%, rgba(201, 162, 75, 0.12) 0%, transparent 70%),
+        linear-gradient(180deg, var(--midnight-deeper) 0%, var(--midnight) 100%);
+      padding: 90px 24px;
+      text-align: center;
+    }
+    .codex-cover {
+      max-width: 360px; width: 100%; margin: 0 auto;
+      border-radius: 8px;
+      box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.55),
+        0 0 100px rgba(201, 162, 75, 0.22);
+    }
+
+    /* SOCIAL PULSE — gatilho de prova social estratégico */
+    .social-pulse {
+      background: linear-gradient(180deg, rgba(201, 162, 75, 0.06) 0%, rgba(201, 162, 75, 0.10) 100%);
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+      padding: 50px 32px;
+      margin: 60px auto 0;
+      text-align: center;
+    }
+    .social-pulse .pulse-eyebrow {
+      font-family: 'Cinzel', serif; color: var(--gold-deep);
+      font-size: 12px; letter-spacing: 3.5px; text-transform: uppercase;
+      margin-bottom: 22px !important; font-weight: 600;
+    }
+    .social-pulse .pulse-quote {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: clamp(20px, 2.4vw, 25px); line-height: 1.5;
+      color: var(--midnight) !important;
+      margin: 0 !important; font-weight: 500;
+      max-width: 660px; margin: 0 auto !important;
+    }
+    .social-pulse .pulse-quote strong {
+      color: var(--gold-deep); font-style: normal; font-weight: 700;
+    }
+    @media (max-width: 640px) {
+      .social-pulse { padding: 36px 22px; margin-top: 40px; }
+      .social-pulse .pulse-quote { font-size: 18px; }
+    }
+
+    /* SELO COSMIC HERO (Block 3) */
+    .devices-image-hero {
+      max-width: 480px; margin: 0 auto 40px; padding: 0 4px;
+    }
+    .devices-image-hero img {
+      width: 100%; border-radius: 8px;
+      box-shadow: 0 16px 50px rgba(14, 23, 38, 0.30);
+    }
+
+    /* BONUS LIST */
+    .bonus-row {
+      display: flex; align-items: center; gap: 24px;
+      padding: 24px 0; border-bottom: 1px solid var(--line);
+    }
+    .bonus-row:last-child { border-bottom: none; }
+    .bonus-mockup {
+      flex-shrink: 0; width: 110px; height: 110px;
+      border-radius: 6px; overflow: hidden;
+      box-shadow: 0 6px 18px rgba(14, 23, 38, 0.22);
+      background: linear-gradient(135deg, var(--midnight) 0%, var(--midnight-deeper) 100%);
+    }
+    .bonus-mockup img { width: 100%; height: 100%; object-fit: cover; }
+    .bonus-info { flex: 1; }
+    .bonus-info .num {
+      font-family: 'Cinzel', serif; color: var(--gold-deep);
+      font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+      font-weight: 600;
+    }
+    .bonus-info h4 {
+      font-family: 'Cinzel', serif; font-weight: 600;
+      font-size: 21px; color: var(--midnight); margin: 4px 0 8px;
+    }
+    .bonus-info p {
+      font-size: 19px; color: var(--text); margin: 0;
+      font-style: italic; font-weight: 500;
+    }
+
+    /* COUNTDOWN */
+    .countdown-strip {
+      background: var(--midnight); color: var(--parchment);
+      text-align: center; padding: 18px 20px;
+      font-family: 'Cinzel', serif; font-size: 14px;
+      letter-spacing: 2px; text-transform: uppercase;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+    }
+    .countdown-strip .label { color: var(--gold-soft); }
+    .countdown-strip .timer {
+      color: var(--red-flame); font-weight: 700;
+      font-size: 22px; letter-spacing: 3px;
+      margin: 0 12px; font-family: 'Inter', monospace;
+      display: inline-block; min-width: 130px;
+    }
+    .countdown-strip .post { color: var(--gold-soft); }
+
+    /* OFFER BOX */
+    .offer-section {
+      background: var(--parchment-dark);
+      padding: 70px 24px;
+    }
+    .offer-box {
+      max-width: 560px; margin: 0 auto;
+      background: linear-gradient(180deg, var(--midnight) 0%, var(--midnight-deeper) 100%);
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      padding: 48px 36px;
+      box-shadow: 0 12px 60px rgba(14, 23, 38, 0.4);
+      color: var(--parchment);
+      text-align: center;
+    }
+    .offer-box .ribbon {
+      display: inline-block;
+      background: var(--red-flame); color: white;
+      font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 8px 18px; border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .offer-box h3 {
+      font-family: 'Cinzel', serif; font-weight: 700;
+      font-size: 26px; color: var(--gold); letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+    .offer-box .subtitle {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 16px; color: var(--gold-soft); margin-bottom: 28px;
+    }
+    .offer-list {
+      list-style: none; padding: 0; margin: 0 0 24px 0; text-align: left;
+    }
+    .offer-list li {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 9px 0; border-bottom: 1px solid rgba(201, 162, 75, 0.2);
+      font-family: 'Inter', sans-serif; font-size: 14px;
+      color: var(--parchment-dark); gap: 12px;
+    }
+    .offer-list li:last-child { border-bottom: none; }
+    .offer-list .item { flex: 1; }
+    .offer-list .item::before {
+      content: '✓'; color: var(--gold); margin-right: 10px; font-weight: 700;
+    }
+    .offer-list .item.flame::before { content: '🔥'; }
+    .offer-list .price {
+      color: var(--gold-soft); font-weight: 500;
+      flex-shrink: 0; min-width: 60px; text-align: right;
+    }
+    .offer-list li.divider { border-bottom: 1px solid var(--gold); padding: 0; margin: 8px 0; }
+    .offer-list .total-row {
+      font-family: 'Cinzel', serif; color: var(--gold);
+      font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+      padding-top: 12px;
+    }
+    .offer-list .total-row .price { color: var(--gold); font-size: 17px; font-weight: 700; }
+    .offer-price { margin: 32px 0 16px; }
+    .offer-price .old {
+      font-family: 'Cinzel', serif; color: var(--gold-soft);
+      text-decoration: line-through; font-size: 22px;
+      display: block; margin-bottom: 4px; opacity: 0.6;
+    }
+    .offer-price .new {
+      font-family: 'Cinzel', serif; color: var(--gold);
+      font-size: 64px; font-weight: 700;
+      letter-spacing: 1px; line-height: 1;
+      text-shadow: 0 0 30px rgba(201, 162, 75, 0.4);
+    }
+    .offer-fine {
+      font-family: 'Inter', sans-serif; font-size: 12px;
+      color: var(--gold-soft); margin: 16px 0 28px; letter-spacing: 0.3px;
+    }
+    .offer-secure {
+      font-family: 'Inter', sans-serif; font-size: 11px;
+      color: var(--gold-soft); margin-top: 18px; letter-spacing: 0.5px;
+    }
+
+    /* CTA isolated block */
+    .cta-section {
+      text-align: center; padding: 50px 24px 30px;
+      background: var(--parchment);
+    }
+    .cta-section .small-print {
+      margin-top: 18px; font-size: 14px; color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial {
+      background: white; border-left: 4px solid var(--gold);
+      padding: 28px 32px; margin: 24px 0; border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(14, 23, 38, 0.06);
+    }
+    .testimonial blockquote {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 20px; line-height: 1.6; color: var(--text); margin-bottom: 14px;
+      font-weight: 500;
+    }
+    .testimonial .author {
+      font-family: 'Inter', sans-serif; font-size: 12px;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--gold-deep); font-weight: 700;
+    }
+
+    /* SEAL DIVIDER */
+    .seal-divider {
+      background:
+        radial-gradient(circle at 50% 50%, rgba(201, 162, 75, 0.15) 0%, transparent 70%),
+        linear-gradient(180deg, var(--midnight) 0%, var(--midnight-deeper) 100%);
+      padding: 110px 24px;
+      text-align: center;
+    }
+    .seal-divider img {
+      max-width: 360px; width: 100%; height: auto;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 80px rgba(201, 162, 75, 0.35));
+    }
+    .seal-divider .quote {
+      margin-top: 44px;
+      font-family: 'Cinzel', serif; font-style: italic;
+      color: var(--gold); font-size: clamp(20px, 2.6vw, 28px);
+      letter-spacing: 1.5px; font-weight: 500;
+    }
+
+    /* GUARANTEE */
+    .guarantee {
+      background: var(--midnight); color: var(--parchment);
+      padding: 50px 36px; margin: 50px 0; border-radius: 8px;
+      text-align: center; border: 2px solid var(--gold);
+    }
+    .guarantee .seal-line {
+      font-family: 'Cinzel', serif; color: var(--gold);
+      font-size: 12px; letter-spacing: 3px; margin-bottom: 14px;
+    }
+    .guarantee h3 {
+      font-family: 'Cinzel', serif; color: var(--gold);
+      font-size: 24px; font-weight: 600; margin-bottom: 22px; letter-spacing: 0.5px;
+    }
+    .guarantee p {
+      color: var(--parchment-dark); font-size: 18px;
+      margin-bottom: 14px; font-weight: 500;
+    }
+    .guarantee p strong, .guarantee strong { color: var(--gold) !important; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--line); padding: 22px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-family: 'Cinzel', serif; font-size: 19px; font-weight: 500;
+      color: var(--midnight); margin-bottom: 10px;
+    }
+    .faq-a { color: var(--text); font-size: 19px; font-weight: 500; }
+
+    /* FINAL CTA */
+    .final-cta {
+      background:
+        radial-gradient(circle at 50% 50%, rgba(201, 162, 75, 0.15) 0%, transparent 70%),
+        linear-gradient(180deg, var(--midnight-soft) 0%, var(--midnight-deeper) 100%);
+      color: var(--parchment); padding: 90px 24px;
+      text-align: center; margin-top: 70px;
+    }
+    .final-cta h2 {
+      color: var(--parchment) !important;
+      max-width: 720px; margin: 0 auto 32px !important;
+      font-family: 'Cinzel', serif; font-weight: 600;
+      font-size: clamp(26px, 3.4vw, 36px); line-height: 1.3;
+    }
+    .final-cta p {
+      max-width: 700px; margin: 0 auto 14px;
+      color: var(--parchment-dark); font-size: 19px; font-weight: 500;
+    }
+    .final-cta .accent {
+      color: var(--gold); font-size: 24px;
+      font-family: 'Cinzel', serif;
+      margin-top: 24px; font-weight: 600;
+    }
+    .final-cta .small-print {
+      font-family: 'Inter', sans-serif; font-size: 12px;
+      letter-spacing: 1px; color: var(--gold-soft);
+      margin-top: 26px; text-transform: uppercase;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--midnight-deeper); color: var(--gold-soft);
+      padding: 44px 24px; text-align: center;
+      font-family: 'Cinzel', serif; letter-spacing: 2px;
+    }
+    .footer .brand { color: var(--gold); font-size: 22px; margin-bottom: 8px; }
+    .footer .tagline {
+      font-style: italic; font-family: 'Cormorant Garamond', serif;
+      font-size: 16px; letter-spacing: 0.5px;
+    }
+    .footer .meta {
+      font-family: 'Inter', sans-serif; font-size: 11px;
+      letter-spacing: 1px; color: rgba(201, 162, 75, 0.5);
+      margin-top: 18px; text-transform: uppercase;
+    }
+
+    /* MOBILE */
+    @media (max-width: 640px) {
+      body { font-size: 19px; }
+      .hero { padding: 80px 20px 60px; }
+      .hero h1 { font-size: 21px; }
+      .hero h1.accent { font-size: 25px; }
+      .hero .subhead { font-size: 18px; }
+      .section { padding: 50px 20px; }
+      .section h2 { font-size: 24px; }
+      .section p { font-size: 19px; }
+      .cta-btn { font-size: 14px; padding: 20px 28px; letter-spacing: 1px; }
+      .cta-btn-large { font-size: 15px; padding: 22px 30px; }
+      .offer-box { padding: 32px 22px; }
+      .offer-box h3 { font-size: 22px; }
+      .offer-price .new { font-size: 50px; }
+      .countdown-strip { font-size: 11px; letter-spacing: 1px; padding: 14px 16px; }
+      .countdown-strip .timer { font-size: 18px; min-width: 100px; }
+      .codex-cover { max-width: 92%; }
+      .codex-cover-teaser { padding: 50px 16px; }
+      .devices-image-hero { margin-bottom: 30px; max-width: 320px; }
+      .bonus-mockup { width: 80px; height: 80px; }
+      .bonus-info h4 { font-size: 18px; }
+      .bonus-info p { font-size: 17px; }
+      .bonus-row { gap: 16px; padding: 18px 0; }
+      .seal-divider { padding: 70px 20px; }
+      .seal-divider img { max-width: 240px; }
+      .seal-divider .quote { font-size: 17px; margin-top: 32px; padding: 0 18px; }
+    }
+
+    /* EXIT-INTENT POPUP */
+    .exit-popup {
+      position: fixed; inset: 0;
+      background: rgba(6, 11, 20, 0.88);
+      display: none; align-items: center; justify-content: center;
+      padding: 24px; z-index: 9999;
+      animation: exitFadeIn 0.35s ease-out;
+      backdrop-filter: blur(4px);
+    }
+    .exit-popup.active { display: flex; }
+    .exit-popup-modal {
+      width: 100%; max-width: 540px;
+      background: linear-gradient(180deg, var(--midnight) 0%, var(--midnight-deeper) 100%);
+      border: 1px solid var(--gold);
+      border-radius: 14px;
+      padding: 52px 40px 36px;
+      text-align: center;
+      color: var(--parchment);
+      position: relative;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 0 0 60px rgba(201, 162, 75, 0.08) inset;
+      animation: exitSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes exitFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes exitSlideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .exit-popup-close {
+      position: absolute; top: 14px; right: 18px;
+      background: rgba(6, 11, 20, 0.55); border: 1px solid rgba(201, 162, 75, 0.35);
+      width: 32px; height: 32px; border-radius: 50%;
+      color: var(--gold-soft);
+      font-size: 20px; cursor: pointer; line-height: 1;
+      opacity: 0.85; transition: opacity 0.2s;
+      font-family: 'Inter', sans-serif;
+      z-index: 3;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .exit-popup-close:hover { opacity: 1; }
+    .exit-eyebrow {
+      font-family: 'Cinzel', serif; color: var(--gold-soft);
+      font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .exit-title {
+      font-family: 'Cinzel', serif; color: var(--gold);
+      font-size: 24px; font-weight: 700; letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .exit-divider {
+      width: 50px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 20px;
+    }
+    .exit-body {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 17px; color: var(--parchment-dark);
+      line-height: 1.55; margin-bottom: 26px; font-weight: 500;
+    }
+    .exit-body strong { color: var(--gold-soft); font-style: normal; font-weight: 600; }
+    .exit-price-box {
+      background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(201, 162, 75, 0.3);
+      border-radius: 8px; padding: 22px 18px; margin-bottom: 24px;
+    }
+    .exit-price-old {
+      font-family: 'Cinzel', serif; color: var(--gold-soft);
+      text-decoration: line-through; font-size: 18px; opacity: 0.6;
+      display: block; margin-bottom: 4px;
+    }
+    .exit-price-new {
+      font-family: 'Cinzel', serif; color: var(--gold);
+      font-size: 54px; font-weight: 700; line-height: 1;
+      text-shadow: 0 0 30px rgba(201, 162, 75, 0.4);
+    }
+    .exit-price-new .currency { font-size: 0.55em; vertical-align: top; margin-right: 4px; }
+    .exit-save-badge {
+      display: inline-block; margin-top: 10px;
+      font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--red-flame); background: rgba(209, 75, 60, 0.15);
+      padding: 5px 12px; border-radius: 999px;
+    }
+    .exit-disclaimer {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 14px; color: rgba(243, 234, 212, 0.6);
+      margin-bottom: 18px;
+    }
+    .exit-cta {
+      display: block; width: 100%;
+      background: linear-gradient(180deg, var(--gold-soft) 0%, var(--gold) 60%, var(--gold-deep) 100%);
+      color: var(--midnight);
+      font-family: 'Inter', sans-serif;
+      font-weight: 700; font-size: 14.5px;
+      letter-spacing: 2px; text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 22px; border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 5px 0 var(--gold-deep), 0 12px 28px rgba(201, 162, 75, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .exit-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 0 var(--gold-deep), 0 16px 36px rgba(201, 162, 75, 0.45);
+    }
+    .exit-footer {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--gold-soft); opacity: 0.65;
+      margin-top: 18px;
+    }
+    @media (max-width: 600px) {
+      .exit-popup-modal { padding: 40px 22px 26px; }
+      .exit-title { font-size: 21px; }
+      .exit-body { font-size: 15.5px; }
+      .exit-price-new { font-size: 46px; }
+      .exit-cta { font-size: 12.5px; padding: 16px 16px; letter-spacing: 1.6px; }
+      .exit-disclaimer { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <h1>Você Carregou Dores A Vida Inteira Que Nunca Conseguiu Nomear.</h1>
+  <h1 class="accent">Mas Existe Um Nome Para Elas:<br><span class="twelve">DOZE!</span></h1>
+  <p class="subhead">12 marcas foram colocadas em você antes de você nascer. Elas explicam as <strong>rejeições</strong>. O <strong>tempo que nunca encaixou</strong>. As <strong>madrugadas em que você acorda sem motivo</strong>. O <strong>TDAH</strong> que disseram ser só distração. Os <strong>padrões que continuam voltando</strong>. Tudo o que dói em você desde que você consegue se lembrar.</p>
+  <p class="read-slow">Leia devagar. Parte disto vai parecer ter sido escrito sobre você.</p>
+</section>
+
+<!-- ============== BLOCO 1 — A DOR ============== -->
+<section class="section">
+  <h2>Você Já Tentou de Tudo. Nada Segurou.</h2>
+  <p>Você fez terapia. Leu os livros. Orou. Meditou. Foi para retiros. Trabalhou no perdão. Fez votos consigo mesmo de que não ia se permitir mais isso.</p>
+  <p>Cada coisa ajudou um pouco. <strong>Nenhuma delas segurou.</strong></p>
+  <p>E por baixo de tudo isso — mais quieto na maioria dos dias, mais alto em alguns — sempre teve um sentimento que você nunca soube o que fazer com ele.</p>
+  <p>O sentimento de que você está aqui para alguma coisa específica. De que você foi marcado, de um jeito que você não consegue nomear, para uma missão que você não consegue ver. De que a dificuldade da sua vida não foi aleatória.</p>
+  <p>Você se perguntou, nas suas horas mais solitárias, se tem algo errado com você.</p>
+  <p>Você se perguntou se isso é depressão. Ansiedade. Trauma não-processado. Algum tipo de defeito de personalidade que ninguém soube te explicar.</p>
+  <p>Algumas dessas coisas podem ser verdade também. <strong>Nenhuma delas é a verdade inteira.</strong></p>
+  <div class="impact-box">
+    <span class="small">Você pode ter certeza de uma coisa:</span>
+    Nada Está Errado Com Você.<br><strong>Você Foi Marcado.</strong>
+  </div>
+  <div style="margin-top: 32px; text-align: center;">
+    <a href="https://pay.hotmart.com/W105968079G?off=f6v40ro5&checkoutMode=10" class="cta-btn cta-btn-large">Quero Ler As 12 Marcas Agora →</a>
+  </div>
+</section>
+
+<!-- ============== CODEX COVER TEASER ============== -->
+<section class="codex-cover-teaser">
+  <img src="IMAGENS/00-codex-cover.png" alt="O Código dos Escolhidos" class="codex-cover">
+  <div style="margin-top: 28px; text-align: center;">
+    <a href="#offer" class="cta-btn cta-btn-large">Ver O Que Está Incluído →</a>
+  </div>
+</section>
+
+<!-- ============== BLOCO 2 — O MECANISMO ============== -->
+<section class="section" style="background: var(--parchment-dark);">
+  <h2>12 Marcas Foram Colocadas em Você Antes de Você Nascer.</h2>
+  <div class="impact-box">
+    Não Como Castigo.<br><strong>Como Missão.</strong>
+  </div>
+  <p>Os escolhidos sempre carregaram o mesmo padrão. 12 marcas. Cada uma colocada antes da sua alma entrar no corpo. Cada uma com a sua história, o seu peso, e o seu jeito de aparecer na sua vida.</p>
+  <p>Aqui estão 4 delas:</p>
+  <ul class="marks-teaser">
+    <li>
+      <strong>A Marca do Rejeitado</strong>
+      <span>A primeira ferida. A criança que sabia, antes de saber falar, que algo nela não combinava com a própria família. <em>Se você sempre se sentiu fora do lugar mesmo dentro de casa — esta é a sua.</em></span>
+    </li>
+    <li>
+      <strong>A Marca da Hora Tardia</strong>
+      <span>Tudo de bom chegando depois que o mundo já te disse que era tarde demais. <em>Se a sua vida correu vinte anos atrás dos seus amigos, e mesmo assim você sente que ainda não chegou — esta é a sua.</em></span>
+    </li>
+    <li>
+      <strong>A Marca da Frequência Mais Alta</strong>
+      <span>O que disseram ser TDAH, autismo, dispersão, "sensibilidade demais". A sua mente foi feita para receber mais do que a mente da maioria — e ninguém te explicou isso. <em>Se você é assim — esta é a sua.</em></span>
+    </li>
+    <li>
+      <strong>A Marca da Voz da Noite</strong>
+      <span>As madrugadas em que você acorda sem motivo, com o quarto quieto e a mente estranhamente clara. Não é insônia. Tem alguém te chamando há anos, no horário em que você consegue ouvir. <em>Se isso é seu — esta é a sua.</em></span>
+    </li>
+  </ul>
+  <p class="marks-teaser-more">— e mais 8 marcas que pertencem só a quem entra no Código.</p>
+
+  <div class="social-pulse">
+    <p class="pulse-eyebrow">⊹ O que está acontecendo com os leitores ⊹</p>
+    <p class="pulse-quote">Muitas pessoas estão começando O Código e tendo uma sensação estranha — como se estivessem <strong>lembrando</strong> quem sempre foram. Como se as marcas já estivessem dentro delas, esperando alguém finalmente dar nome ao que elas carregam desde antes de nascer.</p>
+  </div>
+</section>
+
+<!-- ============== BLOCO 3 — O PRODUTO (sem CTA — primeira CTA só no Bloco 4) ============== -->
+<section class="section">
+  <h2>Conheça O Código dos Escolhidos</h2>
+  <p>14 capítulos. 12 áudios contemplativos embutidos — um por marca. Você lê do celular, do tablet, do computador. Lê pela manhã. Lê na madrugada, quando o peso volta. Volta sempre que precisar.</p>
+  <div class="impact-box">
+    <strong>É Seu. Para Sempre.</strong>
+  </div>
+</section>
+
+<!-- ============== BÔNUS ============== -->
+<section class="section" style="padding-top: 30px;">
+  <h2>Você Também Recebe os 6 Bônus Especiais.</h2>
+  <p style="text-align: center; font-weight: 500; color: var(--midnight);">
+    São 6 caminhos diferentes. A mesma marca abre todos.<br>
+    <strong>São presentes seus. Você não paga nada a mais por eles.</strong>
+  </p>
+
+  <div class="bonus-row">
+    <div class="bonus-mockup"><img src="IMAGENS/01-bonus-mapa.png" alt="O Mapa Das 12 Marcas"></div>
+    <div class="bonus-info">
+      <div class="num">Bônus 1</div>
+      <h4>O Mapa Das 12 Marcas</h4>
+      <p>Doze testes que revelam qual marca tem liderado a sua vida — e quais têm te sabotado em silêncio, sem você nunca ter notado.</p>
+    </div>
+  </div>
+
+  <div class="bonus-row">
+    <div class="bonus-mockup"><img src="IMAGENS/02-bonus-crianca.png" alt="A Cura Da Criança Interior"></div>
+    <div class="bonus-info">
+      <div class="num">Bônus 2</div>
+      <h4>A Cura Da Criança Interior</h4>
+      <p>Reencontre a criança escolhida que você foi antes do mundo te ensinar o oposto. Ela está esperando você há mais tempo do que você imagina.</p>
+    </div>
+  </div>
+
+  <div class="bonus-row">
+    <div class="bonus-mockup"><img src="IMAGENS/03-bonus-neurodivergentes.png" alt="Neurodivergentes, Atípicos e Sensitivos"></div>
+    <div class="bonus-info">
+      <div class="num">Bônus 3 · 🔥</div>
+      <h4>Neurodivergentes, Atípicos e Sensitivos</h4>
+      <p>Pare de tratar o seu TDAH, o seu autismo, a sua hipersensibilidade, a sua "esquisitice" como defeito. Os profetas tinham tudo isso. Ver o mundo diferente não é falha. É marca.</p>
+    </div>
+  </div>
+
+  <div class="bonus-row">
+    <div class="bonus-mockup"><img src="IMAGENS/04-bonus-prosperidade.png" alt="Código da Prosperidade Do Escolhido"></div>
+    <div class="bonus-info">
+      <div class="num">Bônus 4</div>
+      <h4>Código da Prosperidade Do Escolhido</h4>
+      <p>Por que a sua vida financeira tem sido tão pesada — e por que isso não é maldição, mas o deserto que os escolhidos atravessam antes da abundância chegar.</p>
+    </div>
+  </div>
+
+  <div class="bonus-row">
+    <div class="bonus-mockup"><img src="IMAGENS/05-bonus-coincidencias.png" alt="A Linguagem das Coincidências"></div>
+    <div class="bonus-info">
+      <div class="num">Bônus 5</div>
+      <h4>A Linguagem das Coincidências</h4>
+      <p>Os 11:11, os sonhos que voltam, os animais que aparecem do nada — você não está perdendo o juízo. Alguém está falando com você. Aqui você aprende a escutar.</p>
+    </div>
+  </div>
+
+  <div class="bonus-row">
+    <div class="bonus-mockup"><img src="IMAGENS/06-bonus-audiobook.png" alt="Audiobook do Código"></div>
+    <div class="bonus-info">
+      <div class="num">Bônus 6</div>
+      <h4>Audiobook do Código</h4>
+      <p>Para quando ler é demais. Para a caminhada longa. Para a madrugada que não passa. O Código inteiro, na voz que abre o que precisa ser aberto em você.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== COUNTDOWN + OFERTA ============== -->
+<div class="countdown-strip" id="offer">
+  <span class="label">Oferta de lançamento expira em</span>
+  &nbsp;·&nbsp;
+  <span class="timer" id="countdown">23:59:59</span>
+  &nbsp;·&nbsp;
+  <span class="post">depois disso volta para R$ 469</span>
+</div>
+
+<!-- ============== BLOCO 4 — O BOX DA OFERTA (primeira CTA) ============== -->
+<section class="offer-section">
+  <div class="offer-box">
+    <div class="ribbon">🔥 Oferta por tempo limitado</div>
+    <h3>O CÓDIGO DOS ESCOLHIDOS</h3>
+    <p class="subtitle">As 12 marcas que você carrega sem saber — biblioteca privada + 6 bônus</p>
+
+    <ul class="offer-list">
+      <li><span class="item">O Código dos Escolhidos (14 capítulos + 12 áudios)</span><span class="price">R$ 147</span></li>
+      <li><span class="item">Bônus 1 — O Mapa Das 12 Marcas</span><span class="price">R$ 47</span></li>
+      <li><span class="item">Bônus 2 — A Cura Da Criança Interior</span><span class="price">R$ 47</span></li>
+      <li><span class="item flame">Bônus 3 — Neurodivergentes, Atípicos e Sensitivos</span><span class="price">R$ 47</span></li>
+      <li><span class="item">Bônus 4 — Código da Prosperidade Do Escolhido</span><span class="price">R$ 67</span></li>
+      <li><span class="item">Bônus 5 — A Linguagem das Coincidências</span><span class="price">R$ 47</span></li>
+      <li><span class="item">Bônus 6 — Audiobook do Código</span><span class="price">R$ 67</span></li>
+      <li class="divider"></li>
+      <li class="total-row"><span class="item">VALOR TOTAL</span><span class="price">R$ 469</span></li>
+    </ul>
+
+    <div class="offer-price">
+      <span class="old">R$ 469</span>
+      <span class="new">R$ 37,90</span>
+    </div>
+    <p class="offer-fine">Pagamento único · Sem assinaturas · Sem taxas escondidas</p>
+
+    <a href="https://pay.hotmart.com/W105968079G?off=f6v40ro5&checkoutMode=10" class="cta-btn cta-btn-large">Sim — Ler As 12 Marcas Agora →</a>
+
+    <p class="offer-secure">🔒 Checkout seguro · Acesso instantâneo · Garantia de 7 dias</p>
+  </div>
+</section>
+
+<!-- ============== CTA repetida abaixo do box ============== -->
+<section class="cta-section">
+  <a href="https://pay.hotmart.com/W105968079G?off=f6v40ro5&checkoutMode=10" class="cta-btn cta-btn-large">Quero Receber Agora — R$ 37,90 →</a>
+  <p class="small-print">100% digital · Funciona em celular, tablet e computador · Garantia de 7 dias</p>
+</section>
+
+<!-- ============== BLOCO 5 — TESTEMUNHOS ============== -->
+<section class="section">
+  <h2>O Que Leitores Escreveram Depois de Ler</h2>
+  <div class="testimonial">
+    <blockquote>"O capítulo da Voz da Noite explicou vinte anos acordando de madrugada. Eu nunca tinha visto a conexão com Samuel antes. Não durmo do mesmo jeito desde então — no melhor sentido."</blockquote>
+    <p class="author">— Carlos, 53 — Belo Horizonte, MG</p>
+  </div>
+  <div class="testimonial">
+    <blockquote>"O capítulo do espelho errado quebrou alguma coisa em mim que precisava ser quebrada. Eu conhecia o padrão com minha mãe a vida inteira — mas ninguém tinha chamado aquilo de marca."</blockquote>
+    <p class="author">— Patrícia, 47 — Curitiba, PR</p>
+  </div>
+  <div class="testimonial">
+    <blockquote>"Eu vim aqui cético. No capítulo três eu já estava lendo em voz alta para mim mesmo. O capítulo da Hora Tardia explicou por que a minha carreira correu vinte anos atrás de todo mundo. Estou exatamente no tempo certo."</blockquote>
+    <p class="author">— Marcos, 55 — Porto Alegre, RS</p>
+  </div>
+  <div class="testimonial">
+    <blockquote>"A Cura da Criança Interior sozinha valia mais do que o preço inteiro. Não sabia que vinha enlutando a criança que eu fui aos seis até ler. Cada página entrega."</blockquote>
+    <p class="author">— Renata, 41 — Salvador, BA</p>
+  </div>
+</section>
+
+<!-- ============== SEAL DIVIDER ============== -->
+<section class="seal-divider">
+  <img src="IMAGENS/selo-codex.png" alt="O Selo da Origem — As 12 Marcas">
+  <div class="quote">Antes de você nascer, você foi marcado.</div>
+</section>
+
+<!-- ============== BLOCO 6 — GARANTIA + FAQ + FINAL CTA ============== -->
+<section class="section">
+  <div class="guarantee">
+    <div class="seal-line">⊹ GARANTIA SAGRADA ⊹</div>
+    <h3>7 Dias de Reconhecimento Total</h3>
+    <p>Lê os três primeiros capítulos. Escuta os três primeiros áudios.</p>
+    <p>Se até o sétimo dia o padrão não pousar em você — escreve um e-mail para <strong>suportesinalsagrado@gmail.com</strong> e a gente devolve os seus R$ 37,90 integrais.</p>
+    <p><strong>Sem perguntas. Sem formulários. Sem resistência.</strong></p>
+  </div>
+
+  <h2>Perguntas Frequentes</h2>
+  <div class="faq-item">
+    <div class="faq-q">Eu sou homem — isso é para mim?</div>
+    <div class="faq-a">Sim. As marcas não têm gênero. A maioria dos doze arquétipos bíblicos é masculina.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Eu já estou nos meus cinquenta ou sessenta — é tarde demais?</div>
+    <div class="faq-a">Não. A Marca da Hora Tardia é uma das doze justamente porque os escolhidos chegam à missão tarde. Muitos leitores dizem que esse é o capítulo que mais pesa.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Vou receber alguma coisa na minha casa?</div>
+    <div class="faq-a">Não. <strong>O material é 100% digital.</strong> Nada chega na sua casa — você não espera entrega. Você recebe acesso imediato no momento da compra.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Em quais dispositivos posso ler?</div>
+    <div class="faq-a">Em qualquer um. <strong>Celular, tablet ou computador.</strong> Você abre e lê de onde estiver — não precisa instalar nada.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Isso é religioso? Preciso ser cristão?</div>
+    <div class="faq-a">O Código usa arquétipos bíblicos como linguagem. Não é texto doutrinário, não exige tradição específica.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Substitui terapia?</div>
+    <div class="faq-a">Não. Funciona junto com terapia, oração ou cuidado médico.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">É assinatura?</div>
+    <div class="faq-a">Não. Pagamento único. Acesso vitalício.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Como recebo depois que comprar?</div>
+    <div class="faq-a">Acesso imediato por e-mail e em link privado de leitura. Abre em qualquer dispositivo.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Como funcionam os 6 bônus? Recebo eles junto com o Código?</div>
+    <div class="faq-a">O Código você recebe no momento da compra. Os 6 bônus chegam até você 7 dias depois, todos juntos. Cada bônus é um caminho que se abre a partir do que a primeira semana com o Código vai descer em você. Liberar tudo no mesmo dia fragmenta a atenção, e cada marca precisa do seu tempo para ser reconhecida primeiro, antes de você atravessar os caminhos que partem dela. No oitavo dia o material chega completo no seu acesso, no momento certo de você abrir.</div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="final-cta">
+  <h2>Você Carregou Esse Padrão Tempo Demais Sem Ter Um Nome Para Ele.</h2>
+  <p>As 12 marcas foram colocadas em você antes de você nascer.</p>
+  <p>Hoje é o dia em que você para de carregá-las como defeito.</p>
+  <p class="accent">São a prova de que você foi escolhido, marcado e chamado.</p>
+  <div style="margin-top: 40px;">
+    <a href="https://pay.hotmart.com/W105968079G?off=f6v40ro5&checkoutMode=10" class="cta-btn cta-btn-large">Ler As 12 Marcas — R$ 37,90</a>
+  </div>
+  <p class="small-print">Garantia 7 dias · Acesso vitalício · Pagamento único · 100% digital</p>
+</section>
+
+<footer class="footer">
+  <div class="brand">VOZ DA ORIGEM</div>
+  <div class="tagline">Antes de você nascer, você foi marcado.</div>
+  <div class="meta">© 2026 · O Código dos Escolhidos</div>
+</footer>
+
+<script>
+  function updateCountdown() {
+    const now = new Date();
+    const target = new Date();
+    target.setHours(23, 59, 59, 999);
+    const diff = target - now;
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const fmt = (n) => String(n).padStart(2, '0');
+    const el = document.getElementById('countdown');
+    if (el) el.textContent = `${fmt(h)}:${fmt(m)}:${fmt(s)}`;
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+<!-- ============== EXIT-INTENT POPUP (mobile only) ============== -->
+<div class="exit-popup" id="exitPopup" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="exit-popup-modal">
+    <button class="exit-popup-close" aria-label="Fechar" type="button">×</button>
+    <div class="exit-eyebrow">⊹ Espera ⊹</div>
+    <h3 class="exit-title">Você Ainda Não Atravessou</h3>
+    <div class="exit-divider"></div>
+    <p class="exit-body">O umbral se fecha no momento em que você sai daqui. <strong>Leve isto com você</strong> — uma única chance de entrar no Código dos Escolhidos por um preço menor.</p>
+    <div class="exit-price-box">
+      <span class="exit-price-old">R$ 37,90</span>
+      <div class="exit-price-new"><span class="currency">R$</span>32,90</div>
+      <span class="exit-save-badge">Economize R$ 5 · Pagamento único</span>
+    </div>
+    <p class="exit-disclaimer">Este preço fecha quando esta página fecha. Não há segunda oferta.</p>
+    <a class="exit-cta" href="https://pay.hotmart.com/W105968079G?off=nj5rnlt8&checkoutMode=10">Sim — Abrir o Código por R$ 32,90 →</a>
+    <div class="exit-footer">Garantia 7 dias · Acesso instantâneo</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const popup = document.getElementById('exitPopup');
+  if (!popup) return;
+
+  // Mobile only
+  if (window.innerWidth >= 768) return;
+
+  // Once per session
+  if (sessionStorage.getItem('exitPopupFired') === '1') return;
+
+  const PAGE_LOAD = Date.now();
+  const MIN_TIME_MS = 20000;
+  let fired = false;
+
+  function fire() {
+    if (fired) return;
+    if (Date.now() - PAGE_LOAD < MIN_TIME_MS) return;
+    fired = true;
+    sessionStorage.setItem('exitPopupFired', '1');
+    popup.classList.add('active');
+    popup.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    popup.classList.remove('active');
+    popup.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  popup.querySelector('.exit-popup-close').addEventListener('click', close);
+  popup.addEventListener('click', function (e) {
+    if (e.target === popup) close();
+  });
+
+  // Trigger 1: scroll-up rápido
+  let lastScroll = window.scrollY;
+  let lastTime = Date.now();
+  window.addEventListener('scroll', function () {
+    const now = Date.now();
+    const dy = window.scrollY - lastScroll;
+    const dt = now - lastTime;
+    if (dy < -60 && dt > 0 && dt < 350) {
+      fire();
+    }
+    lastScroll = window.scrollY;
+    lastTime = now;
+  }, { passive: true });
+
+  // Trigger 2: visibilitychange
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') {
+      fire();
+    }
+  });
+
+  // Trigger 3: back button do celular
+  try {
+    history.pushState({ exitGate: true }, '');
+  } catch (err) { /* noop */ }
+  window.addEventListener('popstate', function () {
+    fire();
+  });
+})();
+</script>
+</body>
+</html>
